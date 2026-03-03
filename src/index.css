@@ -1,1 +1,48 @@
 @import "tailwindcss";
+
+@theme {
+  --color-forest-50: #f0f5eb;
+  --color-forest-100: #dce8d2;
+  --color-forest-200: #b9d1a6;
+  --color-forest-300: #8fb875;
+  --color-forest-400: #6a9c4d;
+  --color-forest-500: #4e7a34;
+  --color-forest-600: #3d6128;
+  --color-forest-700: #2f4a1e;
+  --color-forest-800: #243a17;
+  --color-forest-900: #1a2d0f;
+  --color-forest-950: #0d1a07;
+
+  --color-cream: #f7f3eb;
+  --color-cream-dark: #ede6d8;
+  --color-warm-white: #fafaf7;
+
+  --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: #1a1a1a;
+  background-color: var(--color-warm-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scroll offset for fixed navbar */
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
+/* Hero scroll indicator bounce */
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+.animate-bounce-slow {
+  animation: bounce-slow 2s ease-in-out infinite;
+}
