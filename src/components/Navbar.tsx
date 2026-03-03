@@ -6,7 +6,6 @@ const navLinks = [
   { label: 'Highlights', href: '/#highlights' },
   { label: 'Itinerary', href: '/#itinerary' },
   { label: 'Location', href: '/#location' },
-  { label: 'Reviews', href: '/#reviews' },
   { label: 'Access', href: '/#access' },
 ];
 

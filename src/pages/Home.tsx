@@ -359,7 +359,9 @@ function Location() {
   );
 }
 
-/* ─── Reviews ─── */
+/*
+── Reviews (commented out until real reviews are available) ──
+
 function Reviews() {
   const reviews = [
     {
@@ -392,7 +394,6 @@ function Reviews() {
           {reviews.map((review, i) => (
             <FadeIn key={i} delay={i * 150}>
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-                {/* Quote mark */}
                 <svg
                   className="w-8 h-8 text-forest-400 mb-4"
                   viewBox="0 0 24 24"
@@ -412,6 +413,7 @@ function Reviews() {
     </section>
   );
 }
+*/
 
 /* ─── Access ─── */
 function Access() {
@@ -516,7 +518,7 @@ export default function Home() {
       <Highlights />
       <Itinerary />
       <Location />
-      <Reviews />
+      {/* <Reviews /> */}
       <Access />
       <Footer />
     </>
