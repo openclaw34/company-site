@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import FadeIn from '@/components/FadeIn';
 
 /* ─── Hero ─── */
@@ -409,6 +410,37 @@ function Access() {
 }
 
 /* ─── Home Page ─── */
+/* ─── Booking CTA ─── */
+function BookingCTA() {
+  return (
+    <section className="py-24 md:py-32 bg-forest-900 text-white text-center">
+      <div className="max-w-3xl mx-auto px-6">
+        <FadeIn>
+          <p className="text-sm uppercase tracking-[0.2em] text-forest-300 mb-4">
+            Reserve Your Spot
+          </p>
+          <h2 className="font-serif text-4xl md:text-6xl mb-6">
+            Ready to join us?
+          </h2>
+          <p className="text-white/70 text-lg mb-3">
+            &yen;15,000 per person &mdash; Full-day guided experience
+          </p>
+          <p className="text-white/50 text-sm mb-10">
+            Weekends only &middot; Max 10 guests per tour &middot;
+            English-guided
+          </p>
+          <Link
+            href="/booking"
+            className="inline-block px-10 py-4 bg-white text-forest-900 font-semibold rounded-full text-lg hover:bg-cream transition-colors duration-200"
+          >
+            Book Your Tour
+          </Link>
+        </FadeIn>
+      </div>
+    </section>
+  );
+}
+
 export default function Home() {
   return (
     <>
@@ -418,6 +450,7 @@ export default function Home() {
       <Itinerary />
       <Location />
       <Access />
+      <BookingCTA />
     </>
   );
 }

@@ -44,14 +44,17 @@ export default function Legal() {
           <div className="border-b border-gray-200 pb-6">
             <h2 className="text-sm uppercase tracking-wider text-forest-600 font-semibold mb-2">Payment Method</h2>
             <p className="text-gray-700">
-              To be determined. Payment details will be confirmed when the
-              booking system is introduced.
+              Credit card and debit card (Visa, Mastercard, American Express,
+              JCB) via Stripe secure payment processing.
             </p>
           </div>
 
           <div className="border-b border-gray-200 pb-6">
             <h2 className="text-sm uppercase tracking-wider text-forest-600 font-semibold mb-2">Payment Period</h2>
-            <p className="text-gray-700">To be determined upon introduction of the booking system.</p>
+            <p className="text-gray-700">
+              Payment is processed immediately at the time of booking. Your
+              spot is confirmed only upon successful payment.
+            </p>
           </div>
 
           <div className="border-b border-gray-200 pb-6">
@@ -65,9 +68,15 @@ export default function Legal() {
 
           <div className="border-b border-gray-200 pb-6">
             <h2 className="text-sm uppercase tracking-wider text-forest-600 font-semibold mb-2">Cancellation &amp; Refund Policy</h2>
-            <p className="text-gray-700">
-              To be determined. Cancellation and refund terms will be
-              established when the booking system is introduced.
+            <ul className="list-disc list-inside space-y-1 text-gray-700">
+              <li>7 or more days before the tour date: Full refund</li>
+              <li>3&ndash;6 days before the tour date: 50% refund</li>
+              <li>2 days before or less, or no-show: No refund</li>
+            </ul>
+            <p className="text-gray-700 mt-3">
+              Refunds are processed within 5&ndash;10 business days via the
+              original payment method. To request a cancellation, contact us at
+              placeholder@teamsoda.jp with your booking reference.
             </p>
           </div>
 

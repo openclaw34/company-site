@@ -57,6 +57,16 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
+          <Link
+            href="/booking"
+            className={`ml-2 px-5 py-2 rounded-full text-sm font-medium tracking-wide transition-all duration-200 ${
+              solid
+                ? 'bg-forest-600 text-white hover:bg-forest-700'
+                : 'bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm'
+            }`}
+          >
+            Book Now
+          </Link>
         </div>
 
         {/* Mobile hamburger */}
@@ -96,6 +106,13 @@ export default function Navbar() {
             {link.label}
           </a>
         ))}
+        <Link
+          href="/booking"
+          className="block mx-4 my-3 py-3 text-center text-white bg-forest-600 font-medium rounded-xl hover:bg-forest-700 transition-colors"
+          onClick={() => setIsMenuOpen(false)}
+        >
+          Book Now
+        </Link>
       </div>
     </nav>
   );
