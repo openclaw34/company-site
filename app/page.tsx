@@ -22,7 +22,7 @@ function Hero() {
           KANPAI
         </h1>
         <p className="mt-6 text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
-          A full-day sake journey to a 300-year-old brewery in Okutama
+          A half-day sake journey to a 300-year-old brewery in Okutama
         </p>
       </div>
 
@@ -49,7 +49,7 @@ function Hero() {
 function Experience() {
   const details = [
     { label: 'Price', value: '¥15,000 / person' },
-    { label: 'Duration', value: 'Full day (~7–8 hours)' },
+    { label: 'Duration', value: 'Half day (~5 hours)' },
     { label: 'Language', value: 'English' },
     { label: 'Group Size', value: '2–8 guests' },
   ];
@@ -84,7 +84,7 @@ function Experience() {
               guided journey from Tokyo to Ozawa Brewery in Okutama. Founded
               over 300 years ago during the Edo period, this historic brewery
               sits nestled in a lush mountain valley fed by pristine spring
-              water from the Tama River.
+              water drawn from deep within the bedrock caves beneath the brewery.
             </p>
             <p className="mt-4 text-lg text-gray-600 leading-relaxed">
               Your day includes an exclusive tour of the brewing facilities,
@@ -220,13 +220,13 @@ function Highlights() {
 /* ─── Itinerary ─── */
 function Itinerary() {
   const steps = [
-    { num: '01', title: 'Meet at Shinjuku Station', description: 'Your guide will meet you at a designated spot in Shinjuku Station. Exact meeting point details will be shared upon booking confirmation.' },
+    { num: '01', title: 'Meet at Shinjuku Station', description: 'Your guide will meet you at Chuo Line Platform 12 in Shinjuku Station. Detailed directions will be shared upon booking confirmation.' },
     { num: '02', title: 'Travel by Green Car', description: 'Enjoy a comfortable ride aboard JR\'s Green Car (first class) through the scenic western Tokyo countryside. Transportation costs are not included in the tour price.' },
     { num: '03', title: 'Brewery Tour', description: 'Explore Ozawa Brewery\'s historic facilities with an English-speaking guide. You\'ll receive an English-language tour script to follow along as you discover centuries of brewing tradition.' },
     { num: '04', title: 'Sake Tasting', description: 'Sample multiple varieties of freshly brewed sake directly from the source. Your guide will walk you through each pour, explaining the unique characteristics and brewing methods.' },
-    { num: '05', title: 'Riverside Lunch', description: 'Settle in for a leisurely meal at a riverside restaurant overlooking the Tama River gorge, surrounded by the natural beauty of Okutama.' },
+    { num: '05', title: 'Riverside Lunch', description: 'Settle in for a leisurely meal at a restaurant in the Okutama area, overlooking the Tama River gorge. In case of rain, dining may take place at an indoor venue nearby.' },
     { num: '06', title: 'Your Photos, Delivered', description: 'Throughout the day, your guide captures candid moments and scenic shots. A curated digital photo collection will be shared with you after the tour.' },
-    { num: '07', title: 'Return to Shinjuku', description: 'After a full day of exploration, travel back to Shinjuku Station where the tour concludes. Your guide will accompany you for the return journey.' },
+    { num: '07', title: 'Return to Shinjuku', description: 'After the tour, travel back to Shinjuku Station where the tour concludes. Your guide will accompany you for the return journey.' },
   ];
 
   return (
@@ -268,141 +268,25 @@ function Itinerary() {
   );
 }
 
-/* ─── Location ─── */
-function Location() {
+/* ─── Map ─── */
+function MapSection() {
   return (
     <section id="location" className="py-24 md:py-32 bg-cream">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          <FadeIn>
-            <div className="aspect-4/3 rounded-2xl overflow-hidden">
-              <img
-                src="https://images.pexels.com/photos/2591408/pexels-photo-2591408.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                alt="Aerial view of a river winding through green mountains"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </FadeIn>
-
-          <FadeIn delay={150}>
-            <p className="text-sm uppercase tracking-[0.2em] text-forest-500 mb-3">
-              Location
-            </p>
-            <h2 className="font-serif text-4xl md:text-5xl text-forest-900 mb-6">
-              Okutama, Tokyo
-            </h2>
-            <p className="text-2xl font-serif text-forest-700 italic mb-6">
-              Tokyo&apos;s hidden valley
-            </p>
-            <p className="text-gray-600 leading-relaxed mb-8">
-              Just 90 minutes from Shinjuku, Okutama feels like another world
-              entirely. This mountainous region at Tokyo&apos;s western edge has been
-              home to sake brewing for over three centuries, thanks to its
-              pristine spring water and cool mountain climate — ideal conditions
-              for crafting exceptional sake.
-            </p>
-
-            <div className="flex gap-8">
-              <div>
-                <p className="font-serif text-3xl text-forest-800 font-bold">90</p>
-                <p className="text-sm text-gray-500">min from Shinjuku</p>
-              </div>
-              <div>
-                <p className="font-serif text-3xl text-forest-800 font-bold">300+</p>
-                <p className="text-sm text-gray-500">years of brewing</p>
-              </div>
-            </div>
-          </FadeIn>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ─── Access ─── */
-function Access() {
-  return (
-    <section id="access" className="py-24 md:py-32 bg-warm-white">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-5xl mx-auto px-6">
         <FadeIn>
-          <p className="text-sm uppercase tracking-[0.2em] text-forest-500 mb-3 text-center">
-            Getting There
-          </p>
-          <h2 className="font-serif text-4xl md:text-5xl text-forest-900 text-center mb-16">
-            Access
-          </h2>
+          <div className="aspect-video rounded-2xl overflow-hidden border border-forest-200">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3237.123!2d139.0986!3d35.8097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6019390800000001%3A0x1!2sOzawa+Brewery!5e0!3m2!1sen!2sjp!4v1709000000000"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Ozawa Brewery, Okutama"
+            />
+          </div>
         </FadeIn>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <FadeIn>
-            <div className="space-y-8">
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-forest-100 rounded-xl flex items-center justify-center">
-                  <svg className="w-6 h-6 text-forest-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                    <circle cx="12" cy="10" r="3" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-forest-900 mb-1">Meeting Point</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    Shinjuku Station, Tokyo. Exact meeting location details will be
-                    shared upon booking confirmation.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-forest-100 rounded-xl flex items-center justify-center">
-                  <svg className="w-6 h-6 text-forest-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="1" y="3" width="15" height="13" rx="2" />
-                    <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
-                    <circle cx="5.5" cy="18.5" r="2.5" />
-                    <circle cx="18.5" cy="18.5" r="2.5" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-forest-900 mb-1">Transport</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    JR Green Car (first class) from Shinjuku to Okutama.
-                    Transportation costs are not included in the tour price.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-forest-100 rounded-xl flex items-center justify-center">
-                  <svg className="w-6 h-6 text-forest-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="12" cy="12" r="10" />
-                    <polyline points="12 6 12 12 16 14" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-forest-900 mb-1">Duration</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    Approximately 7–8 hours, departing in the morning and returning
-                    in the late afternoon.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </FadeIn>
-
-          <FadeIn delay={150}>
-            <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-forest-100 via-forest-50 to-cream overflow-hidden relative border border-forest-200">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <svg className="w-12 h-12 text-forest-300 mx-auto mb-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                    <circle cx="12" cy="10" r="3" />
-                  </svg>
-                  <p className="text-forest-400 text-sm font-medium">Map Placeholder</p>
-                  <p className="text-forest-300 text-xs mt-1">Okutama, Tokyo</p>
-                </div>
-              </div>
-            </div>
-          </FadeIn>
-        </div>
       </div>
     </section>
   );
@@ -416,8 +300,7 @@ export default function Home() {
       <Experience />
       <Highlights />
       <Itinerary />
-      <Location />
-      <Access />
+      <MapSection />
     </>
   );
 }
