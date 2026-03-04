@@ -17,8 +17,8 @@
   --color-cream-dark: #ede6d8;
   --color-warm-white: #fafaf7;
 
-  --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-serif: var(--font-cormorant-garamond), Georgia, 'Times New Roman', serif;
+  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
 }
 
 html {
@@ -26,11 +26,8 @@ html {
 }
 
 body {
-  font-family: var(--font-sans);
   color: #1a1a1a;
   background-color: var(--color-warm-white);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Scroll offset for fixed navbar */

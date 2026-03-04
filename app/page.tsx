@@ -1,6 +1,4 @@
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import FadeIn from '../components/FadeIn';
+import FadeIn from '@/components/FadeIn';
 
 /* ─── Hero ─── */
 function Hero() {
@@ -118,7 +116,7 @@ function Experience() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
           <FadeIn>
             <h3 className="text-sm uppercase tracking-wider text-forest-600 mb-4 font-semibold">
-              What's Included
+              What&apos;s Included
             </h3>
             <ul className="space-y-3">
               {includes.map((item) => (
@@ -222,48 +220,13 @@ function Highlights() {
 /* ─── Itinerary ─── */
 function Itinerary() {
   const steps = [
-    {
-      num: '01',
-      title: 'Meet at Shinjuku Station',
-      description:
-        'Your guide will meet you at a designated spot in Shinjuku Station. Exact meeting point details will be shared upon booking confirmation.',
-    },
-    {
-      num: '02',
-      title: 'Travel by Green Car',
-      description:
-        'Enjoy a comfortable ride aboard JR\'s Green Car (first class) through the scenic western Tokyo countryside. Transportation costs are not included in the tour price.',
-    },
-    {
-      num: '03',
-      title: 'Brewery Tour',
-      description:
-        'Explore Ozawa Brewery\'s historic facilities with an English-speaking guide. You\'ll receive an English-language tour script to follow along as you discover centuries of brewing tradition.',
-    },
-    {
-      num: '04',
-      title: 'Sake Tasting',
-      description:
-        'Sample multiple varieties of freshly brewed sake directly from the source. Your guide will walk you through each pour, explaining the unique characteristics and brewing methods.',
-    },
-    {
-      num: '05',
-      title: 'Riverside Lunch',
-      description:
-        'Settle in for a leisurely meal at a riverside restaurant overlooking the Tama River gorge, surrounded by the natural beauty of Okutama.',
-    },
-    {
-      num: '06',
-      title: 'Your Photos, Delivered',
-      description:
-        'Throughout the day, your guide captures candid moments and scenic shots. A curated digital photo collection will be shared with you after the tour.',
-    },
-    {
-      num: '07',
-      title: 'Return to Shinjuku',
-      description:
-        'After a full day of exploration, travel back to Shinjuku Station where the tour concludes. Your guide will accompany you for the return journey.',
-    },
+    { num: '01', title: 'Meet at Shinjuku Station', description: 'Your guide will meet you at a designated spot in Shinjuku Station. Exact meeting point details will be shared upon booking confirmation.' },
+    { num: '02', title: 'Travel by Green Car', description: 'Enjoy a comfortable ride aboard JR\'s Green Car (first class) through the scenic western Tokyo countryside. Transportation costs are not included in the tour price.' },
+    { num: '03', title: 'Brewery Tour', description: 'Explore Ozawa Brewery\'s historic facilities with an English-speaking guide. You\'ll receive an English-language tour script to follow along as you discover centuries of brewing tradition.' },
+    { num: '04', title: 'Sake Tasting', description: 'Sample multiple varieties of freshly brewed sake directly from the source. Your guide will walk you through each pour, explaining the unique characteristics and brewing methods.' },
+    { num: '05', title: 'Riverside Lunch', description: 'Settle in for a leisurely meal at a riverside restaurant overlooking the Tama River gorge, surrounded by the natural beauty of Okutama.' },
+    { num: '06', title: 'Your Photos, Delivered', description: 'Throughout the day, your guide captures candid moments and scenic shots. A curated digital photo collection will be shared with you after the tour.' },
+    { num: '07', title: 'Return to Shinjuku', description: 'After a full day of exploration, travel back to Shinjuku Station where the tour concludes. Your guide will accompany you for the return journey.' },
   ];
 
   return (
@@ -279,14 +242,11 @@ function Itinerary() {
         </FadeIn>
 
         <div className="relative">
-          {/* Timeline line */}
           <div className="absolute left-[23px] top-2 bottom-2 w-px bg-forest-200" />
-
           <div className="space-y-10">
             {steps.map((step, i) => (
               <FadeIn key={step.num} delay={i * 80}>
                 <div className="flex gap-6">
-                  {/* Step number circle */}
                   <div className="relative flex-shrink-0 w-12 h-12 rounded-full bg-forest-600 text-white flex items-center justify-center text-sm font-semibold">
                     {step.num}
                   </div>
@@ -332,11 +292,11 @@ function Location() {
               Okutama, Tokyo
             </h2>
             <p className="text-2xl font-serif text-forest-700 italic mb-6">
-              Tokyo's hidden valley
+              Tokyo&apos;s hidden valley
             </p>
             <p className="text-gray-600 leading-relaxed mb-8">
               Just 90 minutes from Shinjuku, Okutama feels like another world
-              entirely. This mountainous region at Tokyo's western edge has been
+              entirely. This mountainous region at Tokyo&apos;s western edge has been
               home to sake brewing for over three centuries, thanks to its
               pristine spring water and cool mountain climate — ideal conditions
               for crafting exceptional sake.
@@ -359,62 +319,6 @@ function Location() {
   );
 }
 
-/*
-── Reviews (commented out until real reviews are available) ──
-
-function Reviews() {
-  const reviews = [
-    {
-      text: 'An incredible day exploring a part of Tokyo most visitors never see. The brewery tour was fascinating and the riverside lunch was the highlight of our trip.',
-      author: 'Coming Soon',
-    },
-    {
-      text: 'Perfect blend of culture, nature, and great sake. Our guide was knowledgeable and made the whole experience feel personal and special.',
-      author: 'Coming Soon',
-    },
-    {
-      text: "The train ride through the mountains was beautiful, and the sake tasting exceeded all expectations. Can't recommend this enough!",
-      author: 'Coming Soon',
-    },
-  ];
-
-  return (
-    <section id="reviews" className="py-24 md:py-32 bg-forest-900 text-white">
-      <div className="max-w-7xl mx-auto px-6">
-        <FadeIn>
-          <p className="text-sm uppercase tracking-[0.2em] text-forest-300 mb-3 text-center">
-            Testimonials
-          </p>
-          <h2 className="font-serif text-4xl md:text-5xl text-white text-center mb-16">
-            Guest Reviews
-          </h2>
-        </FadeIn>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {reviews.map((review, i) => (
-            <FadeIn key={i} delay={i * 150}>
-              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-                <svg
-                  className="w-8 h-8 text-forest-400 mb-4"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z" />
-                </svg>
-                <p className="text-white/80 leading-relaxed mb-6 text-sm">
-                  {review.text}
-                </p>
-                <p className="text-sm text-white/40">— {review.author}</p>
-              </div>
-            </FadeIn>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-*/
-
 /* ─── Access ─── */
 function Access() {
   return (
@@ -432,7 +336,6 @@ function Access() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <FadeIn>
             <div className="space-y-8">
-              {/* Meeting Point */}
               <div className="flex gap-4">
                 <div className="flex-shrink-0 w-12 h-12 bg-forest-100 rounded-xl flex items-center justify-center">
                   <svg className="w-6 h-6 text-forest-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -449,7 +352,6 @@ function Access() {
                 </div>
               </div>
 
-              {/* Transport */}
               <div className="flex gap-4">
                 <div className="flex-shrink-0 w-12 h-12 bg-forest-100 rounded-xl flex items-center justify-center">
                   <svg className="w-6 h-6 text-forest-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -468,7 +370,6 @@ function Access() {
                 </div>
               </div>
 
-              {/* Duration */}
               <div className="flex gap-4">
                 <div className="flex-shrink-0 w-12 h-12 bg-forest-100 rounded-xl flex items-center justify-center">
                   <svg className="w-6 h-6 text-forest-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -487,7 +388,6 @@ function Access() {
             </div>
           </FadeIn>
 
-          {/* Map placeholder */}
           <FadeIn delay={150}>
             <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-forest-100 via-forest-50 to-cream overflow-hidden relative border border-forest-200">
               <div className="absolute inset-0 flex items-center justify-center">
@@ -512,15 +412,12 @@ function Access() {
 export default function Home() {
   return (
     <>
-      <Navbar />
       <Hero />
       <Experience />
       <Highlights />
       <Itinerary />
       <Location />
-      {/* <Reviews /> */}
       <Access />
-      <Footer />
     </>
   );
 }
