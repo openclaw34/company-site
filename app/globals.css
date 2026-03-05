@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   --color-forest-50: #f0f5eb;
@@ -37,8 +37,13 @@ section[id] {
 
 /* Hero scroll indicator bounce */
 @keyframes bounce-slow {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(8px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
 }
 .animate-bounce-slow {
   animation: bounce-slow 2s ease-in-out infinite;

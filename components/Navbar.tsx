@@ -13,19 +13,21 @@ const navLinks = [
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [menuOpenForPath, setMenuOpenForPath] = useState<{ path: string; open: boolean }>({
+    path: '/',
+    open: false,
+  });
   const pathname = usePathname();
   const isHome = pathname === '/';
+  const isMenuOpen = menuOpenForPath.path === pathname && menuOpenForPath.open;
+  const toggleMenu = () => setMenuOpenForPath({ path: pathname, open: !isMenuOpen });
+  const closeMenu = () => setMenuOpenForPath({ path: pathname, open: false });
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  useEffect(() => {
-    setIsMenuOpen(false);
-  }, [pathname]);
 
   // On non-home pages, always show solid navbar
   const solid = isScrolled || !isHome;
@@ -38,10 +40,7 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16 md:h-20">
-        <Link
-          href="/"
-          className={`font-serif text-2xl font-bold tracking-wide ${textColor}`}
-        >
+        <Link href="/" className={`font-serif text-2xl font-bold tracking-wide ${textColor}`}>
           KANPAI
         </Link>
 
@@ -70,17 +69,31 @@ export default function Navbar() {
 
         {/* Mobile hamburger */}
         <button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          onClick={toggleMenu}
           className={`md:hidden p-2 ${textColor}`}
           aria-label="Toggle menu"
         >
           {isMenuOpen ? (
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
               <line x1="18" y1="6" x2="6" y2="18" />
               <line x1="6" y1="6" x2="18" y2="18" />
             </svg>
           ) : (
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
               <line x1="3" y1="6" x2="21" y2="6" />
               <line x1="3" y1="12" x2="21" y2="12" />
               <line x1="3" y1="18" x2="21" y2="18" />
@@ -100,7 +113,7 @@ export default function Navbar() {
             key={link.label}
             href={link.href}
             className="block px-6 py-3 text-forest-800 hover:bg-forest-50 transition-colors"
-            onClick={() => setIsMenuOpen(false)}
+            onClick={closeMenu}
           >
             {link.label}
           </a>
@@ -108,7 +121,7 @@ export default function Navbar() {
         <Link
           href="/booking"
           className="block mx-4 my-3 py-3 text-center text-white bg-forest-600 font-medium rounded-xl hover:bg-forest-700 transition-colors"
-          onClick={() => setIsMenuOpen(false)}
+          onClick={closeMenu}
         >
           Book Now
         </Link>
