@@ -25,11 +25,7 @@ export const metadata: Metadata = {
     'A full-day sake journey to a 300-year-old brewery in Okutama, Tokyo. Guided tour, tasting, and riverside lunch.',
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${cormorant.variable} ${inter.variable}`}>
       <body>

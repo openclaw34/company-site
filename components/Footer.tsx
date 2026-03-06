@@ -11,7 +11,9 @@ export default function Footer() {
               KANPAI
             </Link>
             <p className="mt-3 text-sm text-white/60 leading-relaxed">
-              Curated sake experiences<br />in Okutama, Tokyo.
+              Curated sake experiences
+              <br />
+              in Okutama, Tokyo.
             </p>
           </div>
 
@@ -40,7 +42,16 @@ export default function Footer() {
                 aria-label="Instagram"
                 className="text-white/70 hover:text-white transition-colors"
               >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
                   <rect x="2" y="2" width="20" height="20" rx="5" />
                   <circle cx="12" cy="12" r="5" />
                   <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none" />
